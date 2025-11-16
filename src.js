@@ -1,3 +1,2 @@
-var a="hello friends";
-var b=a.includes("friendsa");
-console.log(b);
+const randomNumber = Math.ceil(Math.random()*20);
+console.log(randomNumber);
