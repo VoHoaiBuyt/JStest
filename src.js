@@ -104,4 +104,31 @@ function convertCtoF(number){
     var result;
     return result = number *(9/5)+32;
 }
-console.log(convertCtoF(-30));*/
+console.log(convertCtoF(-30));
+let count = 0;
+function cc(card){
+    if(card >= 2 && card <= 6){
+        count += 1;
+    }else if(card >= 7 && card <= 9){
+        // count remains unchanged
+    }else if(card === 10 || card === "J" || card === "Q" || card === "K" || card === "A"){
+        count -= 1;
+    }
+    
+    if(count > 0){
+        return count + " Bet";
+    }else{
+        return count + " Hold";
+    }
+}
+console.log(cc(3));
+console.log(cc(7));
+console.log(cc("Q"));
+console.log(cc(8));
+console.log(cc("A"));*/
+function truncateString(str,num){
+    if(str.length>num){
+        return str.slice(0,num) + "...";
+    }
+    return str;
+}
