@@ -125,10 +125,41 @@ console.log(cc(3));
 console.log(cc(7));
 console.log(cc("Q"));
 console.log(cc(8));
-console.log(cc("A"));*/
+console.log(cc("A"));
 function truncateString(str,num){
     if(str.length>num){
         return str.slice(0,num) + "...";
     }
     return str;
 }
+function conFirmEnding(str1,str2){
+    if(str1.lastIndexOf(str2)==str1.length-(str2.length)){
+        return true;
+    }else return false;
+}
+console.log(conFirmEnding("Bastina", "n"));*/
+console.log("Grocery shopping list");
+const shoppingList=[];
+console.log("It will be nice to have some fruit to eat.");
+shoppingList.push(" Apples");
+function getShoppingListMsg(shoppingList){
+    return `Current Shopping List: ${shoppingList}.`;
+}
+console.log(getShoppingListMsg(shoppingList));
+shoppingList.push(" Grapes");
+console.log(getShoppingListMsg(shoppingList));
+console.log("It looks like we need to get some cooking oil.");
+shoppingList.unshift("Vegetable Oil");
+console.log(getShoppingListMsg(shoppingList));
+shoppingList.push("Popcorn","Beef Jerky","Potato Chips");
+console.log(getShoppingListMsg(shoppingList));
+console.log("This looks like too much junk food.");
+shoppingList.pop();
+console.log(getShoppingListMsg(shoppingList));
+console.log("It might be nice to get a dessert.");
+shoppingList.unshift("Chocolate Cake");
+console.log(getShoppingListMsg(shoppingList));
+console.log("On second thought, maybe we should be more health conscious.");
+shoppingList.shift();
+shoppingList[0]="Canola Oil";
+console.log(getShoppingListMsg(shoppingList));
