@@ -137,7 +137,7 @@ function conFirmEnding(str1,str2){
         return true;
     }else return false;
 }
-console.log(conFirmEnding("Bastina", "n"));*/
+console.log(conFirmEnding("Bastina", "n"));
 console.log("Grocery shopping list");
 const shoppingList=[];
 console.log("It will be nice to have some fruit to eat.");
@@ -162,4 +162,54 @@ console.log(getShoppingListMsg(shoppingList));
 console.log("On second thought, maybe we should be more health conscious.");
 shoppingList.shift();
 shoppingList[0]="Canola Oil";
-console.log(getShoppingListMsg(shoppingList));
+console.log(getShoppingListMsg(shoppingList));*/
+const lunches =[];
+function addLunchToEnd(lunches,lunchItem){
+    lunches.push(lunchItem);
+    console.log(`${lunchItem} added to the end of the lunch menu.`);
+    return lunches;
+}
+function addLunchToStart(lunches,lunchItem){
+    lunches.unshift(lunchItem);
+    console.log(`${lunchItem} added to the start of the lunch menu.`);
+    return lunches;
+}
+function removeLastLunch(lunches){
+    if(lunches.length > 0){
+        const lunchItem = lunches.pop();
+        console.log(`${lunchItem} removed from the end of the lunch menu.`);
+        return lunches;
+    }else {
+        console.log("No lunches to remove.");
+        return "No lunches to remove.";
+    }
+}
+function removeFirstLunch(lunches){
+    if(lunches.length > 0){
+        const lunchItem = lunches.shift();
+        console.log(`${lunchItem} removed from the start of the lunch menu.`);
+        return lunches;
+    }else {
+        console.log("No lunches to remove.");
+        return "No lunches to remove.";
+    }
+}
+console.log(removeFirstLunch(["Salad","Eggs","Cheese"]));
+function getRandomLunch(lunches){
+    if(lunches.length>0){
+        const lunchItem = lunches[Math.floor(Math.random() * lunches.length)];
+        console.log(`Randomly selected lunch: ${lunchItem}`);
+        return lunchItem;
+    } else {
+        console.log("No lunches available.");
+        return "No lunches available.";
+    }
+}
+function showLunchMenu(lunches){
+    if(lunches.length>0){
+        console.log("Menu items: "+lunches.join(", "));
+        return lunches;
+    }else {
+        return console.log("The menu is empty.");
+    }
+}
