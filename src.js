@@ -162,7 +162,7 @@ console.log(getShoppingListMsg(shoppingList));
 console.log("On second thought, maybe we should be more health conscious.");
 shoppingList.shift();
 shoppingList[0]="Canola Oil";
-console.log(getShoppingListMsg(shoppingList));*/
+console.log(getShoppingListMsg(shoppingList));
 const lunches =[];
 function addLunchToEnd(lunches,lunchItem){
     lunches.push(lunchItem);
@@ -212,4 +212,33 @@ function showLunchMenu(lunches){
     }else {
         return console.log("The menu is empty.");
     }
-}
+}*/
+const recipes = [];
+
+const recipe1 = {
+  name: 'Spaghetti Carbonara',
+  ingredients: ['spaghetti', 'Parmesan cheese', 'pancetta', 'black pepper'],
+  cookingTime: 22,
+  totalIngredients: null,
+  difficultyLevel: '',
+  ratings: [4, 5, 4, 5],
+  averageRating: null,
+};
+
+const recipe2 = {
+  name: 'Chicken Curry',
+  ingredients: ['chicken breast', 'coconut milk', 'curry powder', 'onion', 'garlic'],
+  cookingTime: 42,
+  totalIngredients: null,
+  difficultyLevel: '',
+  ratings: [4, 5, 5, 5],
+  averageRating: null,
+};
+const recipe1Name = recipe1.name;
+const recipe2Name = recipe2.name;
+const recipe1CookingTime = recipe1.cookingTime;
+const recipe2CookingTime = recipe2.cookingTime;
+console.log(recipe1Name);
+console.log(recipe2Name);
+console.log(recipe1CookingTime);
+console.log(recipe2CookingTime);
